@@ -44,7 +44,9 @@ require_recipe "memcached"
 # require_recipe "resque-scheduler"
 
 #uncomment to run the redis recipe
-#require_recipe "redis"
+require_recipe "redis"
+require_recipe "ventanex"
+require_recipe "sidekiq"
 
 #require_recipe "logrotate"
 #
@@ -77,7 +79,7 @@ require_recipe "memcached"
 #end
 
 #uncomment to include the newrelic_server_monitoring recipe
-#require_recipe "newrelic_server_monitoring"
+require_recipe "newrelic_server_monitoring"
 
 #enable Extension modules for a given Postgresql database
 # if ['solo','db_master', 'db_slave'].include?(node[:instance_role])
